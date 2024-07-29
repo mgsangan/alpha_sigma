@@ -7,42 +7,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .custom-carousel {
+            width: 100%;
+            height: 900px; /* Adjust height as needed */
+            overflow: hidden;
+        }
+        .custom-carousel .carousel-inner {
+            height: 100%;
+        }
+        .custom-carousel .carousel-item img {
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(15, 15, 138);">
     <div class="container-fluid">
-        <a href="index.html" class="navbar-brand" style="color: rgb(253, 207, 0);">UE ALPHA SIGMA</a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <a href="index.html" class="navbar-brand d-flex align-items-center" style="color: rgb(253, 207, 0);">
+            <img src="as.jpg" alt="Logo" style="height: 30px; margin-right: 10px;">
+            UE ALPHA SIGMA
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav">
                 <a href="index.html" class="nav-item nav-link active" style="color: rgb(253, 207, 0);">Home</a>
-                <a href="services.html" class="nav-item nav-link" style="color: rgb(253, 207, 0);">Services</a>
                 <a href="event.html" class="nav-item nav-link" style="color: rgb(253, 207, 0);">Event</a>
                 <div class="nav-item dropdown">
-                    <a href="scholarship.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(253, 207, 0);">Scholarship</a>
-                    <div class="dropdown-menu">
-                        <a href="scholarship.html" class="dropdown-item">Requirments</a>
-                        <a href="application.html" class="dropdown-item">Apply now</a>
-                        <a href="result.html" class="dropdown-item">Result</a>
-                    </div>
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(253, 207, 0);">Scholarship</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a href="scholarship.html" class="dropdown-item">Requirements</a></li>
+                        <li><a href="application.html" class="dropdown-item">Apply now</a></li>
+                        <li><a href="result.html" class="dropdown-item">Result</a></li>
+                    </ul>
                 </div>
                 <div class="nav-item dropdown">
-                    <a href="scholarship.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(253, 207, 0);">Partnership</a>
-                    <div class="dropdown-menu">
-                        <a href="scholarship.html" class="dropdown-item">Requirments</a>
-                        <a href="application.html" class="dropdown-item">Apply now</a>
-                        <a href="result.html" class="dropdown-item">Result</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="scholarship.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(253, 207, 0);">Membership</a>
-                    <div class="dropdown-menu">
-                        <a href="scholarship.html" class="dropdown-item">Requirments</a>
-                        <a href="application.html" class="dropdown-item">Apply now</a>
-                        <a href="result.html" class="dropdown-item">Result</a>
-                    </div>
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(253, 207, 0);">Services</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                        <li><a href="membership.html" class="dropdown-item">Membership</a></li>
+                        <li><a href="partnership.html" class="dropdown-item">Partnership</a></li>
+                    </ul>
                 </div>
             </div>
             <form class="d-flex">
@@ -57,7 +64,7 @@
         </div>
     </div>
 </nav>
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="myCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel" data-bs-interval="3000">
     <!-- Carousel indicators -->
     <ol class="carousel-indicators">
         <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
