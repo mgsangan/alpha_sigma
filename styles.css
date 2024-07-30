@@ -1,0 +1,14 @@
+.fade-bg {
+    transition: background-color 1s ease;
+  }
+  
+  /* To trigger the fade-in effect, you can change the background color using JavaScript, jQuery, or a CSS animation */
+  .fade-bg-light {
+    background-color: rgba(15, 15, 138, 0.5); /* Adjust the color and opacity as needed */
+  }
+  
+  /* Optional: Define the starting state if you want to fade in on page load */
+  .fade-bg-start {
+    background-color: rgba(15, 15, 138, 0);
+  }
+  
