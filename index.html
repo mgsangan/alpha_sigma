@@ -21,80 +21,102 @@
             height: 100%;
             object-fit: cover;
         }
+        .fade-bg {
+            transition: background-color 1s ease;
+        }
+        .fade-bg-light {
+            background-color: rgba(15, 15, 138, 0.5); /* Adjust the color and opacity as needed */
+        }
+        .fade-bg-start {
+            background-color: rgba(15, 15, 138, 0);
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fade-bg" style="background-color: rgb(15, 15, 138);">
-    <div class="container-fluid">
-        <a href="index.html" class="navbar-brand d-flex align-items-center" style="color: rgb(253, 207, 0);">
-            <img src="as.jpg" alt="Logo" style="height: 30px; margin-right: 10px;">
-            UE ALPHA SIGMA
+    <nav class="navbar navbar-expand-lg navbar-light fade-bg fade-bg-start" style="background-color: rgb(15, 15, 138);">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand d-flex align-items-center" style="color: rgb(253, 207, 0);">
+                <img src="as.jpg" alt="Logo" style="height: 30px; margin-right: 10px;">
+                UE ALPHA SIGMA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-item nav-link active" style="color: rgb(253, 207, 0);">Home</a>
+                    <a href="event.html" class="nav-item nav-link" style="color: rgb(253, 207, 0);">Event</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(253, 207, 0);">Scholarship</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="scholarship.html" class="dropdown-item">Requirements</a></li>
+                            <li><a href="application.html" class="dropdown-item">Apply now</a></li>
+                            <li><a href="result.html" class="dropdown-item">Result</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(253, 207, 0);">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                            <li><a href="membership.html" class="dropdown-item">Membership</a></li>
+                            <li><a href="partnership.html" class="dropdown-item">Partnership</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="button" class="btn btn-secondary"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item nav-link" style="color: rgb(253, 207, 0);">Apply now!</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="myCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="1.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="2.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="3.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+                <img src="4.jpg" class="d-block w-100" alt="Slide 4">
+            </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-            <div class="navbar-nav">
-                <a href="index.html" class="nav-item nav-link active" style="color: rgb(253, 207, 0);">Home</a>
-                <a href="event.html" class="nav-item nav-link" style="color: rgb(253, 207, 0);">Event</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(253, 207, 0);">Scholarship</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a href="scholarship.html" class="dropdown-item">Requirements</a></li>
-                        <li><a href="application.html" class="dropdown-item">Apply now</a></li>
-                        <li><a href="result.html" class="dropdown-item">Result</a></li>
-                    </ul>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(253, 207, 0);">Services</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
-                        <li><a href="membership.html" class="dropdown-item">Membership</a></li>
-                        <li><a href="partnership.html" class="dropdown-item">Partnership</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link" style="color: rgb(253, 207, 0);">Apply now!</a>
-            </div>
-        </div>
-    </div>
-</nav>
-<div id="myCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel" data-bs-interval="3000">
-    <!-- Carousel indicators -->
-    <ol class="carousel-indicators">
-        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
-    </ol>
-
-    <!-- Wrapper for carousel items -->
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="1.jpg" class="d-block w-100" alt="Slide 1">
-        </div>
-        <div class="carousel-item">
-            <img src="2.jpg" class="d-block w-100" alt="Slide 2">
-        </div>
-        <div class="carousel-item">
-            <img src="3.jpg" class="d-block w-100" alt="Slide 3">
-        </div>
-        <div class="carousel-item">
-            <img src="4.jpg" class="d-block w-100" alt="Slide 4">
-        </div>
+        <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
     </div>
 
-    <!-- Carousel controls -->
-    <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navbar = document.querySelector('.fade-bg');
+            setTimeout(function() {
+                navbar.classList.remove('fade-bg-start');
+            }, 100); // Adjust the delay as needed
+        });
+    </script>
 </body>
 </html>

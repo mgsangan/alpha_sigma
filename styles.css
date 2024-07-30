@@ -1,14 +1,36 @@
-.fade-bg {
-    transition: background-color 1s ease;
-  }
-  
-  /* To trigger the fade-in effect, you can change the background color using JavaScript, jQuery, or a CSS animation */
-  .fade-bg-light {
-    background-color: rgba(15, 15, 138, 0.5); /* Adjust the color and opacity as needed */
-  }
-  
-  /* Optional: Define the starting state if you want to fade in on page load */
-  .fade-bg-start {
-    background-color: rgba(15, 15, 138, 0);
-  }
-  
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Apply the font to the body and all elements */
+body, h1, h2, h3, h4, h5, h6, p, a, nav, div {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Example styles for specific elements */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-item .nav-link {
+    font-size: 1rem;
+}
+
+.carousel-caption {
+    font-size: 1.25rem;
+}
+
+.custom-carousel .carousel-item img {
+    font-size: 1rem;
+}
