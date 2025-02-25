@@ -26,7 +26,7 @@
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(253, 207, 0);">Scholarship</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a href="scholarship.html" class="dropdown-item">Requirements</a></li>
-                            <li><a href="application.html" class="dropdown-item">Apply now</a></li>
+                            <li><a href="application.html" class="dropdown-item" id="applyNowLink">Apply now</a></li>
                             <li><a href="result.html" class="dropdown-item">Result</a></li>
                         </ul>
                     </div>
@@ -45,14 +45,62 @@
                     </div>
                 </form>
                 <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link" style="color: rgb(253, 207, 0);">Apply now!</a>
+                    <a href="#" class="nav-item nav-link" style="color: rgb(253, 207, 0);" onclick="checkLogin()">Login</a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        function checkLogin() {
+            const isLoggedIn = false; // Replace with your login check logic
+
+            if (!isLoggedIn) {
+                const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                loginModal.show();
+            } else {
+                window.location.href = 'application.html';
+            }
+        }
+
+        function login() {
+            // Replace with your login logic
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // For demonstration purposes, we're just closing the modal
+            // In a real application, you should verify the login credentials
+            const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+            loginModal.hide();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
